@@ -8,43 +8,8 @@
       "password": "123",
       "email": "mmmanzano2011@gmail.com",
       "exp": ["Croacia","Dinamarca"],
+      "intereses": ["naturaleza","cultura"],
       "numvisitas": 89
-    },
-    {
-      "nombre": "Marcos",
-      "apellidos": "Martinez",
-      "username": "mmm",
-      "password": "123",
-      "email": "mmmanzano2011@gmail.com",
-      "exp": ["Croacia","Dinamarca"],
-      "numvisitas": 55
-    },
-    {
-      "nombre": "Marcos",
-      "apellidos": "Martinez",
-      "username": "mmm",
-      "password": "123",
-      "email": "mmmanzano2011@gmail.com",
-      "exp": ["Croacia","Dinamarca"],
-      "numvisitas": 92
-    },
-    {
-      "nombre": "Marcos",
-      "apellidos": "Martinez",
-      "username": "mmm",
-      "password": "123",
-      "email": "mmmanzano2011@gmail.com",
-      "exp": ["Croacia","Dinamarca"],
-      "numvisitas": 59
-    },
-    {
-      "nombre": "Marcos",
-      "apellidos": "Martinez",
-      "username": "mmm",
-      "password": "123",
-      "email": "mmmanzano2011@gmail.com",
-      "exp": ["Croacia","Dinamarca"],
-      "numvisitas": 8
     }
   ]
 }
