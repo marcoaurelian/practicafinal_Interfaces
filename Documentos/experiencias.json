@@ -1,0 +1,45 @@
+{
+  "experiencias":
+  [
+    {
+      "id":"Croacia",
+      "autor":"mmm" ,
+      "interes":["playa","cultura","naturaleza"] ,
+      "descripcion_breve":"Es un pais muy bonito" ,
+      "descripcion_experiencia": "Croacia es un país de Europa Oriental con una larga costa en el mar Adriático. Incorpora a más de 1,000 islas y lo cruzan los Alpes Dináricos. Su capital interior, Zagreb, es conocida por el barrio Gornji Grad (ciudad alta) y sus diversos museos. La principal ciudad costera, Dubrovnik, tiene murallas enormes que datan del siglo XVI y rodean una ciudad antigua con edificios góticos y renacentistas.",
+      "galeria": ["./images/Croacia/croacia.jpg",
+        "./images/Croacia/croacia1.jpg",
+        "./images/Croacia/croacia2.jpg",
+        "./images/Croacia/croacia3.jpg",
+        "./images/Croacia/croacia4.jpg",
+        "./images/Croacia/croacia5.jpg"
+      ],
+      "valmedia":3.5 ,
+      "presupuesto":450 ,
+      "links": [
+        "http://www.exteriores.gob.es/Portal/es/ServiciosAlCiudadano/SiViajasAlExtranjero/Paginas/DetalleRecomendacion.aspx?IdP=50"
+      ],
+      "visitas":50
+    },
+    {
+      "id":"Dianamarca",
+      "autor":"mmm" ,
+      "interes":["playa","cultura","naturaleza"] ,
+      "descripcion_breve":"Es un pais muy bonito" ,
+      "descripcion_experiencia": "Dinamarca es un país escandinavo que abarca la península de Jutlandia y varias islas. Está conectado con Suecia a través del puente de Öresund. Copenhague, su capital, cuenta con palacios reales y el colorido puerto de Nyhavn, junto con el parque de atracciones Tívoli y la icónica estatua de \"La Sirenita\". Odense es la ciudad natal del escritor Hans Christian Andersen, con un centro medieval con calles de adoquines y casas con entramado de madera",
+      "galeria": ["./images/Dinamarca/denmark.jpg",
+        "./images/Dinamarca/dinamarca1.jpg",
+        "./images/Dinamarca/dinamarca2.jpg",
+        "./images/Dinamarca/dinamarca3.jpg",
+        "./images/Dinamarca/dinamarca4.jpg",
+        "./images/Dinamarca/dinamarca5.jpg"
+      ],
+      "valmedia":4 ,
+      "presupuesto":700 ,
+      "links": [
+        "http://www.exteriores.gob.es/documents/fichaspais/dinamarca_ficha%20pais.pdf"
+      ],
+      "visitas":39
+    }
+  ]
+}
