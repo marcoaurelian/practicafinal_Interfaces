@@ -162,8 +162,8 @@ function cargaExperiencias(){
         nombre.textContent = nuevaexp.id
         nombre.className = "nombre"
         const img = document.createElement("img")
-        img.src = ""
-        img.alt = nuevaexp[0] + "imagen"
+        img.src = nuevaexp.galeria[0]
+        img.alt = nuevaexp.id + "imagen"
         const autor = document.createElement("h5")
         autor.className = "autor"
         autor.textContent = nuevaexp.autor
@@ -175,7 +175,7 @@ function cargaExperiencias(){
         descripcion.textContent = nuevaexp.descripcion_breve
 
         exp.appendChild(nombre)
-        //exp.appendChild(img)
+        exp.appendChild(img)
         //exp.appendChild(autor)
         //exp.appendChild(presupuesto)
         //exp.appendChild(descripcion)

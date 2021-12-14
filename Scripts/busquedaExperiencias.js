@@ -126,6 +126,10 @@ $('#BusquedaAutor').on("keyup", function(e) {
 
     if (key == 13) // the enter key ascii code
     {
+        var x=document.getElementsByClassName("exp")
+        for (i = 0; i < x.length; i++) {
+            $(i).hide()
+        }
         count = 0
         $('.exp').each(function () {
             var txt = $('#BusquedaAutor').val();
@@ -145,9 +149,13 @@ $('#BusquedaExp').on("keyup", function(e) {
 
     if (key == 13) // the enter key ascii code
     {
+        var x=document.getElementsByClassName("exp")
+        for (i = 0; i < x.length; i++) {
+            $(i).hide()
+        }
         count=0
         $('.exp').each(function(){
-            var txt = $('##BusquedaExp').val();
+            var txt = $('#BusquedaExp').val();
             $(this).find('div:contains("'+txt+'")').show()
             count++
         });
@@ -163,6 +171,10 @@ $('#BusquedaInt').on("keyup", function(e) {
 
     if (key == 13) // the enter key ascii code
     {
+        var x=document.getElementsByClassName("exp")
+        for (i = 0; i < x.length; i++) {
+            $(i).hide()
+        }
         count=0
         $('.exp').each(function(){
             var txt = $('#BusquedaInt').val();
