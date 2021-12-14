@@ -188,7 +188,11 @@ $('#BusquedaInt').on("keyup", function(e) {
         }
     }
 });
-//Otros filtros
+$('.exp').click(function (){
+    var nombre=$('.exp').id
+    setCookie("experinciaAcargar",nombre,0.001)
+    window.location.href="Experiencia.html"
+})
 
 
 

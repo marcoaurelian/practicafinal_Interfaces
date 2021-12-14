@@ -7,12 +7,12 @@ function crearExperiencia(){
     var dL=document.getElementById("descript_larga").value
     var pres=document.getElementById("presupuesto").value
     var links=document.getElementById("links").value
-    var img
+    var img=""
     const fileSelector = document.getElementById('f');
     fileSelector.addEventListener('change', (event) => {
         const fileList = event.target.files;
-        console.log(fileList);
-        img=fileList
+        (fileList);
+        img.concat(fileList)
     });
 
     autor = getCookie("usuarioActivo").split(',')

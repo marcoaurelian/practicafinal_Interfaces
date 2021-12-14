@@ -30,10 +30,10 @@ function cargarRankingAutoresMasVisitas(){
             profile.id=listaOrden[i].nombre
             const nombre=document.createElement("h3")
             nombre.className="nombre"
-            nombre.textContent=listaOrden[i].nombre
+            nombre.textContent="Usuario: "+listaOrden[i].nombre
             const visitas=document.createElement("h4")
             visitas.className="visitas"
-            visitas.textContent="visitas"+listaOrden[i].numvisitas
+            visitas.textContent="Visitas: "+listaOrden[i].numvisitas
             profile.appendChild(nombre)
             profile.appendChild(visitas)
 
@@ -74,10 +74,10 @@ function cargarRankingExperienciasMasVisitas(){
             nombre.textContent=listaOrden[i].id
             const autor=document.createElement("h4")
             autor.className="autor"
-            autor.textContent="autor: "+listaOrden[i].autor
+            autor.textContent="Autor: "+listaOrden[i].autor
             const visitas=document.createElement("h4")
             visitas.className="visitas"
-            visitas.textContent="visitas"+listaOrden[i].visitas
+            visitas.textContent="Visitas: "+listaOrden[i].visitas
             exp.appendChild(nombre)
             exp.appendChild(autor)
             exp.appendChild(visitas)
