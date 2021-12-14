@@ -1,6 +1,11 @@
 
-
-
+$(document).ready(function (){
+  if (checkCookieLog()==true){
+    $('#Login').click(function (){
+      window.location.href="perfil.html"
+    })
+  }
+})
 //Comprobar Login
 
 $("#submit").click(function(){

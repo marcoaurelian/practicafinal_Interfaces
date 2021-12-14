@@ -55,7 +55,7 @@ function cargarPerfil(){
     $.getJSON("./Documentos/perfiles.json",function (json) {
         var datos = json.usuarios
         for (i in datos){
-            if(datos[i].username==user[0]){
+            if(datos[i].email==user[0]){
                 const nombre = document.createElement("h2")
                 nombre.textContent = datos[i].username
                 nombre.className = "nombre"
@@ -82,31 +82,34 @@ function cargarPerfil(){
                 return cargado
             }
         }
+        if(cargado==false) {
+            const nombre = document.createElement("h2")
+            nombre.textContent = user[0]
+            nombre.className = "nombre"
+            const email = document.createElement("h3")
+            email.textContent = user[1]
+            const password = document.createElement("h5")
+            password.className = "password"
+            password.textContent = user[2]
+            perfil.appendChild(nombre)
+            perfil.appendChild(email)
+            perfil.appendChild(password)
+            document.getElementById("main").appendChild(perfil)
+            cargado = true
+            alert("cargado con exito")
+            return cargado
+
+        }
+
+        alert("No se ha cargado")
 
     })
-    if(cargado==false) {
-        const nombre = document.createElement("h2")
-        nombre.textContent = user[0]
-        nombre.className = "nombre"
-        const email = document.createElement("h3")
-        email.textContent = user[1]
-        const password = document.createElement("h5")
-        password.className = "password"
-        password.textContent = user[2]
-        perfil.appendChild(nombre)
-        perfil.appendChild(email)
-        perfil.appendChild(password)
-        document.getElementById("main").appendChild(perfil)
-        cargado = true
-        alert("cargado con exito")
-        return cargado
 
-    }
-
-    alert("No se ha cargado")
 }
 
 function cargaExperiencias(){
+    var usuarios=getCookie("usuarioActivo")
+    user=usuarios.split(',')
     const experiencias=document.createElement("div")
     experiencias.className="container exp p-5"
     experiencias.id="experiencias"
@@ -159,6 +162,7 @@ function cargaExperiencias(){
 
     const titulo=document.createElement("h3")
     titulo.textContent="Nueva Experiencia"
+
     newexp.appendChild(titulo)
     experiencias.appendChild(newexp)
     document.getElementById("main").appendChild(experiencias)
@@ -198,4 +202,9 @@ function filtrosBusqueda(){
     setCookie("filtrosBusqueda",[experiencia,autor,interes],1)
     window.location.href="busquedaExperiencias.html"
 
+}
+function signout(){
+    setCookie("usuarioActivo","",0.001)
+    setCookie("loggeado",false,0.001)
+    window.location.href="prueba bootstrap.html"
 }

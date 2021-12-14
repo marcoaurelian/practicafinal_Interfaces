@@ -34,39 +34,30 @@
                 <li class="nav-item me-5 ">
                     <a class="nav-link" href="sobre nosotros.html">Sobre Nosotros</a>
                 </li>
+                <button type="button " class="btn btn-danger" id="signout" data-bs-toggle="modal" data-bs-target="#signoutModal">Cerrar Sesion</button>
 
-
-                <!-- Button trigger modal -->
-                <button type="button " class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    Mi Cuenta
-                </button>
-
-                <!-- Modal -->
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <!-- The Modal -->
+                <div class="modal" id="signoutModal">
                     <div class="modal-dialog">
                         <div class="modal-content">
+
+                            <!-- Modal Header -->
                             <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Iniciar Sesión</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <h4 class="modal-title">¿Quieres salir?</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                             </div>
+
+                            <!-- Modal body -->
                             <div class="modal-body">
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1">
-                                    </div>
-                                    <div class="mb-3 form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">Recuérdame</label>
-                                    </div>
-                                    <button type="submit" id="submit" class="btn btn-primary" style="background-color: green;">Login</button>
-                                    <a href="signup.html" class="btn btn-primary" role="button">No tengo una cuenta</a>
-                                </form>
+                                Tendrás que volver a iniciar sesión si quieres volver a tu perfil.
                             </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">No</button>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="signout()">Si</button>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -95,7 +86,7 @@
             ></a>
 
             <!-- Google -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            <a class="btn btn-outline-light btn-floating m-1" href="#https://www.google.es/" role="button"
             ><i class="fab fa-google"></i
             ></a>
 
