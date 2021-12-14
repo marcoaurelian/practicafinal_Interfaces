@@ -22,7 +22,7 @@ function crearExperiencia(){
     }
 
 
-    setCookie("experienciaRegistrada,"+autor[0]+","+name, JSON.stringify(newuser), 10)
+    localStorage.setItem("nuevaExperiencia"+autor[0],JSON.stringify(newuser))
     window.location.href = "perfil.html"
     alert("se ha registrado con exito")
 }

@@ -118,9 +118,6 @@ function cargaExperiencias(){
     experiencias.appendChild(titulo1)
     $.getJSON("./Documentos/experiencias.json",function (json){
         var datos = json.experiencias
-
-
-
         for (i in datos){
             if (datos[i].autor==user[0]) {
                 const exp = document.createElement("div")
@@ -155,11 +152,40 @@ function cargaExperiencias(){
 
 
     })
+    var autor=getCookie("usuarioActivo").split(',')
+    var nuevaexp=JSON.parse(localStorage.getItem("nuevaExperiencia"+autor[0]))
+    if (nuevaexp!=null){
+        const exp = document.createElement("div")
+        exp.id = nuevaexp.id
+        exp.className = "exp"
+        const nombre = document.createElement("h2")
+        nombre.textContent = nuevaexp.id
+        nombre.className = "nombre"
+        const img = document.createElement("img")
+        img.src = ""
+        img.alt = nuevaexp[0] + "imagen"
+        const autor = document.createElement("h5")
+        autor.className = "autor"
+        autor.textContent = nuevaexp.autor
+        const presupuesto = document.createElement("h5")
+        presupuesto.className = "presupuesto"
+        presupuesto.textContent = nuevaexp.presupuesto
+        const descripcion = document.createElement("p")
+        descripcion.className = "descripcion"
+        descripcion.textContent = nuevaexp.descripcion_breve
+
+        exp.appendChild(nombre)
+        //exp.appendChild(img)
+        //exp.appendChild(autor)
+        //exp.appendChild(presupuesto)
+        //exp.appendChild(descripcion)
+        experiencias.appendChild(exp)
+    }
+
+
     const newexp = document.createElement("div")
     newexp.className="newexp"
     newexp.id="newexp"
-
-
     const titulo=document.createElement("h3")
     titulo.textContent="Nueva Experiencia"
 
@@ -167,7 +193,9 @@ function cargaExperiencias(){
     experiencias.appendChild(newexp)
     document.getElementById("main").appendChild(experiencias)
 }
-
+$('#newexp').click(function (){
+    window.location.href="nuevaExperiencia.html"
+})
 
 //Busquedas
 $('#BusquedaAutor').on("keyup", function(e) {
