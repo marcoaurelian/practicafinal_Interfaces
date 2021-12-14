@@ -84,11 +84,7 @@ function cargaExperiencias(){
                 document.getElementById("main").appendChild(exp)
             }
         }
-
-        })
-
-
-
+    })
 }
 //Cookies
 function getCookie(cname) {
@@ -122,21 +118,44 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-//Busquedas
+//Buscador
+
+$('.ResultNoFound').hide();
 $('#BusquedaAutor').on("keyup", function(e) {
     var key = e.which;
 
     if (key == 13) // the enter key ascii code
     {
-        filtroExperiencias(document.getElementById("BusquedaAutor").value)
+        count = 0
+        $('.exp').each(function () {
+            var txt = $('#BusquedaAutor').val();
+            $(this).find('div:contains("' + txt + '")').show()
+            count++
+        });
+        if (count == 0) {
+            $('.ResultNoFound').show()
+        } else {
+            $('.ResultNoFound').hide()
+        }
     }
 });
+
 $('#BusquedaExp').on("keyup", function(e) {
     var key = e.which;
 
     if (key == 13) // the enter key ascii code
     {
-        filtroExperiencias(document.getElementById("BusquedaExp").value)
+        count=0
+        $('.exp').each(function(){
+            var txt = $('##BusquedaExp').val();
+            $(this).find('div:contains("'+txt+'")').show()
+            count++
+        });
+        if (count == 0) {
+            $('.ResultNoFound').show()
+        } else {
+            $('.ResultNoFound').hide()
+        }
     }
 });
 $('#BusquedaInt').on("keyup", function(e) {
@@ -144,8 +163,20 @@ $('#BusquedaInt').on("keyup", function(e) {
 
     if (key == 13) // the enter key ascii code
     {
-        filtroExperiencias(document.getElementById("BusquedaInt").value)
+        count=0
+        $('.exp').each(function(){
+            var txt = $('#BusquedaInt').val();
+            $(this).find('div:contains("'+txt+'")').show()
+            count++
+        });
+        if (count == 0) {
+            $('.ResultNoFound').show()
+        } else {
+            $('.ResultNoFound').hide()
+        }
     }
 });
 //Otros filtros
+
+
 
